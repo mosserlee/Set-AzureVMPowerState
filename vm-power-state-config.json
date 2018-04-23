@@ -1,0 +1,38 @@
+{
+    "ServicePrincipal": {
+        "SubscriptionId": "your subscription Id",
+        "TenantId": "your tenant Id",
+        "ApplicationId": "your application Id",
+        "AuthKey": "your auth key"
+    },
+    "ResourceGroup": [
+        {
+            "Name": "resource-group-name-1",
+            "VM": [
+                {
+                    "Name": "vm-name-1",
+                    "OnlineCondition": null
+                },
+                {
+                    "Name": "vm-name-2"
+                },
+                {
+                    "Name": "vm-name-3"
+                }
+            ]
+        }
+    ],
+    "OnlineCondition": [
+        {
+            "DayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "FromTime": "18:00",
+            "ToTime": "19:00"
+        }
+    ]
+}
