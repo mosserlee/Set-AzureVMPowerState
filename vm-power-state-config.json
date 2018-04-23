@@ -1,9 +1,9 @@
 {
     "ServicePrincipal": {
-        "SubscriptionId": "your subscription Id",
-        "TenantId": "your tenant Id",
-        "ApplicationId": "your application Id",
-        "AuthKey": "your auth key"
+        "SubscriptionId": "c4698380-b489-4659-b95b-ca4bb8c7d602",
+        "TenantId": "9da1f20e-f031-41fb-9d45-5c994d54753b",
+        "ApplicationId": "34f3c0a3-c214-49b1-b960-eaeb421d2486",
+        "AuthKey": "0fvxa97ANbCEA8ScWJhfSxD0Za1dK2LNpQ3zqcaMjdw#"
     },
     "ResourceGroup": [
         {
@@ -11,7 +11,24 @@
             "VM": [
                 {
                     "Name": "vm-name-1",
-                    "OnlineCondition": null
+                    "OnlineCondition": [
+                        {
+                            "DayOfWeek": [
+                                "Monday",
+                                "Tuesday"
+                            ],
+                            "FromTime": "06:00",
+                            "ToTime": "18:00"
+                        },
+                        {
+                            "DayOfWeek": [
+                                "Thursday",
+                                "Friday"
+                            ],
+                            "FromTime": "09:00",
+                            "ToTime": "12:00"
+                        }
+                    ]
                 },
                 {
                     "Name": "vm-name-2"
@@ -31,8 +48,8 @@
                 "Thursday",
                 "Friday"
             ],
-            "FromTime": "18:00",
-            "ToTime": "19:00"
+            "FromTime": "04:00",
+            "ToTime": "18:00"
         }
     ]
 }
