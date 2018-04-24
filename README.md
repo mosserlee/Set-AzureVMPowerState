@@ -109,7 +109,32 @@ then save them into ServicePrincipal node in configuration file
 ## More integrations
 
 ### Azure automation runbooks.
-Need to do.
+1. Follow the spec [PowerShell runbook guide page](https://docs.microsoft.com/en-us/azure/automation/automation-first-runbook-textual-powershell#step-1---create-new-runbook) to create runbook.
+
+3. Modify the configuration file, set *IsAzureAutomationLogin=true*, also add the *AzureAutomationConnectionName* into **ServicePrincipal** node as below:
+
+``` Json 
+    "IsAzureAutomationLogin": false,
+    "ServicePrincipal": {
+        "AzureAutomationConnectionName": "AzureRunAsConnection"
+    },
+```
+3. Copy the content of file *Set-AzureVMPowerStateOnSchedule.ps1* into runbook source script, and replace the variable **$configText**'s initial value from reading file to inline code by HERE-STRING. 
+``` PowerShell 
+# Read json configuration file
+# $configText = Get-Content "$PSScriptRoot\vm-power-state-config.json"
+$configText = @"
+{
+    "IsAzureAutomationLogin": true,
+    "ServicePrincipal": {
+        "AzureAutomationConnectionName": "AzureRunAsConnection"
+    },
+......
+"@
+```
+
+4. In the [**Test pane**], run and debug your script. a possible output maybe as below snapshot:
+![runbook output snapshot](https://raw.githubusercontent.com/mosserlee/Set-AzureVMPowerStateOnSchedule/master/assert/on-runbook-output.jpg "The runbook output log for Set-AzureVMPowerStateOnSchedule")
 
 ### Windows task scheduler
 Need to do.
