@@ -3,7 +3,7 @@ Start and Stop Azure VMs on schedule to save your cost.
 ## Feature
 1. Secure design : run as on Azure service principal to access only limited resource.
 2. Flexible to configure schedule. It supports to specify one or more global online schedules for multiple VMs, or specify one or more different online schedules for one VMs.
-3. Easly intergate  with Windows task scheduler and Azure automation runbooks.
+3. Easly intergate with Azure automation runbook and windows task scheduler.
 
 ## Requirements
 1. Windows PowerShell 5.0 +
