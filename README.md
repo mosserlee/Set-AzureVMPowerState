@@ -136,5 +136,8 @@ $configText = @"
 4. In the [**Test pane**], run and debug your script. a possible output maybe as below snapshot:
 ![runbook output snapshot](https://raw.githubusercontent.com/mosserlee/Set-AzureVMPowerStateOnSchedule/master/assert/on-runbook-output.jpg "The runbook output log for Set-AzureVMPowerStateOnSchedule")
 
+5. Create a schedule for this runbook to check and reset VM's status.
+![Create a schedule for runbook.](https://raw.githubusercontent.com/mosserlee/Set-AzureVMPowerStateOnSchedule/master/assert/on-runbook-create-schedule.JPG "Create a schedule for runbook. ")
+
 ### Windows task scheduler
 Need to do.
