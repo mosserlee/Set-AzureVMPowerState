@@ -1,4 +1,4 @@
-# Set-AzureVMPowerState
+# Set-AzureVMPowerStateOnSchedule
 Start and Stop Azure VMs on schedule to save your cost.
 ## Feature
 1. Secure design : run as on Azure service principal to access only limited resource.
@@ -57,7 +57,7 @@ then save them into ServicePrincipal node in configuration file
             "VM": [
                 {
                     "Name": "vm-name-1",
-                    "OnlineCondition": [
+                    "OnlineSchedule": [
                         {
                             "DayOfWeek": [
                                 "Monday",
@@ -85,7 +85,7 @@ then save them into ServicePrincipal node in configuration file
             ]
         }
     ],
-    "OnlineCondition": [
+    "OnlineSchedule": [
         {
             "DayOfWeek": [
                 "Monday",
@@ -103,13 +103,13 @@ then save them into ServicePrincipal node in configuration file
 
 4. Test your script in PowerShell console.
 ``` PowerShell 
-    PS D:\Set-AzureVMPowerState> .\Set-AzureVMPowerState.ps1
+    PS D:\Set-AzureVMPowerStateOnSchedule> .\Set-AzureVMPowerStateOnSchedule.ps1
 ```
 
 ## More integrations
 
-### Windows task scheduler
+### Azure automation runbooks.
 Need to do.
 
-### Azure automation runbooks.
+### Windows task scheduler
 Need to do.
