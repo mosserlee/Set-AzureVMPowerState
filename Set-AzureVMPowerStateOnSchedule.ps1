@@ -52,7 +52,7 @@ function Resolve-VMOnlineSchedule {
     if ($schedules.Count -eq 0) {
         return $null
     }
-    $now = Get-Date
+    $now = [DateTimeOffset]::Now
     foreach ($c in $schedules) {
         if ($c.DayOfWeek.Count -eq 0) {
             continue 
@@ -63,8 +63,8 @@ function Resolve-VMOnlineSchedule {
         if (($c.FromTime -eq $null) -and ($c.ToTime -eq $null)) {
             return $false
         }
-        $from = [datetime]($c.FromTime)
-        $to = [datetime]($c.ToTime)
+        $from = [DateTimeOffset]($c.FromTime)
+        $to = [DateTimeOffset]($c.ToTime)
         if ($from -lt $to) {
             return ($now -ge $from) -and ($now -lt $to)
         }

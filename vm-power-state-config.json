@@ -19,16 +19,16 @@
                                 "Monday",
                                 "Tuesday"
                             ],
-                            "FromTime": "06:00",
-                            "ToTime": "18:00"
+                            "FromTime": "06:00 +08:00",
+                            "ToTime": "18:00 +08:00"
                         },
                         {
                             "DayOfWeek": [
                                 "Thursday",
                                 "Friday"
                             ],
-                            "FromTime": "09:00",
-                            "ToTime": "12:00"
+                            "FromTime": "09:00 +08:00",
+                            "ToTime": "12:00 +08:00"
                         }
                     ]
                 },
@@ -50,8 +50,8 @@
                 "Thursday",
                 "Friday"
             ],
-            "FromTime": "04:00",
-            "ToTime": "18:00"
+            "FromTime": "04:00 +08:00",
+            "ToTime": "18:00 +08:00"
         }
     ]
 }
